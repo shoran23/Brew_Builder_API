@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  origin: MyString
+  mash: false
+  color: 1
+  power: 1
+  potential: 9.99
+  max: 1
+  notes: MyString
+
+two:
+  name: MyString
+  origin: MyString
+  mash: false
+  color: 1
+  power: 1
+  potential: 9.99
+  max: 1
+  notes: MyString

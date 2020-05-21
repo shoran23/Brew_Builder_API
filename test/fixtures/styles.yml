@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  overview: MyString
+  ibu_low: 1
+  ibu_high: 1
+  srm_low: 1
+  srm_high: 1
+  og_low: 9.99
+  og_high: 9.99
+  fg_low: 9.99
+  fg_high: 9.99
+  avb: 9.99
+
+two:
+  name: MyString
+  overview: MyString
+  ibu_low: 1
+  ibu_high: 1
+  srm_low: 1
+  srm_high: 1
+  og_low: 9.99
+  og_high: 9.99
+  fg_low: 9.99
+  fg_high: 9.99
+  avb: 9.99

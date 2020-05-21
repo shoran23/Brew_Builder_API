@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recipe: one
+  grain: one
+  hop: one
+  yeast: one
+  grain_qty: 9.99
+  hop_qty: 9.99
+  yeast_qty: 9.99
+
+two:
+  recipe: two
+  grain: two
+  hop: two
+  yeast: two
+  grain_qty: 9.99
+  hop_qty: 9.99
+  yeast_qty: 9.99

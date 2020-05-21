@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lab: MyString
+  type: 
+  form: MyString
+  temp_low: 1
+  temp_high: 1
+  attenuation: 9.99
+  flocculation: MyString
+  notes: MyString
+
+two:
+  name: MyString
+  lab: MyString
+  type: 
+  form: MyString
+  temp_low: 1
+  temp_high: 1
+  attenuation: 9.99
+  flocculation: MyString
+  notes: MyString
