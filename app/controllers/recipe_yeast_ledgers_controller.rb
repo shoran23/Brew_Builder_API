@@ -5,12 +5,12 @@ class RecipeYeastLedgersController < ApplicationController
   def index
     @recipe_yeast_ledgers = RecipeYeastLedger.all
 
-    render json: @recipe_yeast_ledgers.to_json(include: [:recipe, :yeast])
+    render json: @recipe_yeast_ledgers
   end
 
   # GET /recipe_yeast_ledgers/1
   def show
-    render json: @recipe_yeast_ledger.to_json(include: [:recipe, :yeast])
+    render json: @recipe_yeast_ledger
   end
 
   # POST /recipe_yeast_ledgers

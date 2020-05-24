@@ -3,9 +3,9 @@
 one:
   recipe: one
   yeast: one
-  qty: 1
+  qty: 9.99
 
 two:
   recipe: two
   yeast: two
-  qty: 1
+  qty: 9.99

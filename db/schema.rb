@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_21_030517) do
+ActiveRecord::Schema.define(version: 2020_05_22_021657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_05_21_030517) do
     t.decimal "qty"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "percentage"
     t.index ["grain_id"], name: "index_recipe_grain_ledgers_on_grain_id"
     t.index ["recipe_id"], name: "index_recipe_grain_ledgers_on_recipe_id"
   end
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 2020_05_21_030517) do
     t.decimal "qty"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "time"
     t.index ["hop_id"], name: "index_recipe_hop_ledgers_on_hop_id"
     t.index ["recipe_id"], name: "index_recipe_hop_ledgers_on_recipe_id"
   end
@@ -66,6 +68,16 @@ ActiveRecord::Schema.define(version: 2020_05_21_030517) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recipe_id"], name: "index_recipe_style_ledgers_on_recipe_id"
     t.index ["style_id"], name: "index_recipe_style_ledgers_on_style_id"
+  end
+
+  create_table "recipe_yeast_ledgers", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.bigint "yeast_id", null: false
+    t.decimal "qty"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipe_id"], name: "index_recipe_yeast_ledgers_on_recipe_id"
+    t.index ["yeast_id"], name: "index_recipe_yeast_ledgers_on_yeast_id"
   end
 
   create_table "recipe_yeast_scaffolds", force: :cascade do |t|
@@ -85,6 +97,11 @@ ActiveRecord::Schema.define(version: 2020_05_21_030517) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
+    t.decimal "og"
+    t.decimal "fg"
+    t.decimal "alc_by_vol"
+    t.decimal "ibu"
+    t.integer "srm"
   end
 
   create_table "styles", force: :cascade do |t|
@@ -125,6 +142,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_030517) do
   add_foreign_key "recipe_hop_ledgers", "recipes"
   add_foreign_key "recipe_style_ledgers", "recipes"
   add_foreign_key "recipe_style_ledgers", "styles"
+  add_foreign_key "recipe_yeast_ledgers", "recipes"
+  add_foreign_key "recipe_yeast_ledgers", "yeasts"
   add_foreign_key "recipe_yeast_scaffolds", "recipes"
   add_foreign_key "recipe_yeast_scaffolds", "yeasts"
 end

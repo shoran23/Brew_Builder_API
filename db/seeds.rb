@@ -69,9 +69,9 @@ Style.create([
 ])
 
 Recipe.create([
-    {name:"German Pilsner",volume:6.5,efficiency:68,description:"German Style Pilsner."},
-    {name:"Melon Belgian Witbier",volume:6,efficiency:68,description:"Belgian Witbier using melon hops."},
-    {name:"Tropical NEIPA",volume:6,efficiency:68,description:"New England IPA using tropical hops."}
+    {name:"German Pilsner",volume:6.5,efficiency:68,description:"German Style Pilsner.",og:1.062,fg:1.012,alc_by_vol:5.25,ibu:29,srm:3},
+    {name:"Tropical NEIPA",volume:6,efficiency:68,description:"New England IPA using tropical hops.",og:1.063,fg:1.016,alc_by_vol:6.17,srm:5},
+    {name:"Belgian Dubbel",volume:5.5,efficiency:68,description:"Clasical Belgian Dubbel, maltly charcter with dark color",og:1.066,fg:1.018,alc_by_vol:6.3,srm:25}
 ])
 
 puts "Seeded Database"
