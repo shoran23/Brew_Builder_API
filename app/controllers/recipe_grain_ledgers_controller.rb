@@ -46,6 +46,6 @@ class RecipeGrainLedgersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def recipe_grain_ledger_params
-      params.require(:recipe_grain_ledger).permit(:recipe_id, :grain_id, :qty)
+      params.require(:recipe_grain_ledger).permit(:recipe_id, :grain_id, :qty, :percentage)
     end
 end

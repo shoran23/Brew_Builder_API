@@ -46,6 +46,6 @@ class RecipeHopLedgersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def recipe_hop_ledger_params
-      params.require(:recipe_hop_ledger).permit(:recipe_id, :hop_id, :qty)
+      params.require(:recipe_hop_ledger).permit(:recipe_id, :hop_id, :qty, :time)
     end
 end
